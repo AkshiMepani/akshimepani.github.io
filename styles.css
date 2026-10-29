@@ -142,13 +142,15 @@
 }
 
 
-/* ===== FIX HOMEPAGE TOP SPACING ===== */
+
+/* ===== HERO POSITIONING FIX ===== */
 
 #home.hero {
-  min-height: auto !important;
-  padding-top: 35px !important;
-  padding-bottom: 65px !important;
-  margin-top: 0 !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 35px 24px 65px !important;
+  margin: 0 auto !important;
+  align-content: start !important;
   align-items: center !important;
 }
 
@@ -157,4 +159,3 @@
   margin-top: 0 !important;
   align-self: center !important;
 }
-
