@@ -116,3 +116,28 @@
   }
 }
 
+
+/* ===== HERO SPACING REFINEMENT ===== */
+
+#home.hero {
+  padding-top: 70px !important;
+  padding-bottom: 70px !important;
+  min-height: auto !important;
+}
+
+#home .hero-copy,
+#home .hero-visual {
+  align-self: center;
+}
+
+#home .dashboard-card {
+  transform: none !important;
+}
+
+@media (max-width: 768px) {
+  #home.hero {
+    padding-top: 45px !important;
+    padding-bottom: 50px !important;
+  }
+}
+
