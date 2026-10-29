@@ -2,6 +2,48 @@
 
 
 
+/* ===== FINAL HOMEPAGE LAYOUT FIX ===== */
+
+/* Give the homepage room below the navigation */
+#home.hero {
+  padding-top: 160px !important;
+  padding-bottom: 80px !important;
+}
+
+/* Reduce headline size and prevent clipping */
+#home .hero-copy h1 {
+  font-size: clamp(2.8rem, 4vw, 4.2rem) !important;
+  line-height: 1.15 !important;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+/* Align the snapshot beside the introduction */
+#home .hero-visual {
+  align-self: center;
+  transform: none !important;
+}
+
+#home .dashboard-card {
+  transform: none !important;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  #home.hero {
+    padding-top: 115px !important;
+  }
+
+  #home .hero-copy h1 {
+    font-size: clamp(2.3rem, 8vw, 3.2rem) !important;
+  }
+}
+
+
+
+
 /* ===== STRAIGHTEN ANALYTICS SNAPSHOT ===== */
 
 .hero-visual {
