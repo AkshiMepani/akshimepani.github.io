@@ -1,7 +1,4 @@
-*/
-const projects = [
- 
-   
+
 const projects = [
   {
     category: "Power BI · Labour Market Analytics",
