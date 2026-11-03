@@ -242,3 +242,33 @@
   margin-bottom: 12px;
 }
 
+
+/* ===== ALIGN PROJECT CARD FOOTERS ===== */
+
+/* Make each card a vertical layout */
+#project-grid .project-card,
+.project-grid .project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Push the final links container to the bottom */
+#project-grid .project-card > div:last-child,
+.project-grid .project-card > div:last-child {
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+/* Keep both links neatly aligned */
+#project-grid .project-card > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#project-grid .project-card > div:last-child a {
+  margin-right: 0;
+}
+
