@@ -1,19 +1,21 @@
 
 const projects = [
-  {
-    category: "Retail Analytics",
-    title: "Woolworths Merchandise",
-    description: "Uncovering product relationships across 8,902 grocery transactions to guide shelf placement and bundling.",
-    highlights: [
-      "Customer purchasing patterns",
-      "Product correlation analysis",
-      "Merchandising insights"
-    ],
-    tools: "Excel · Correlation Analysis",
-    image: "assets/woolworths.png",
-    repo: "#",
-    demo: "#"
-  },
+  
+{
+  category: "Retail Analytics",
+  title: "Woolworths Market Basket Analysis",
+  description: "Analysed 8,902 grocery transactions to uncover product purchasing relationships, identify cross-selling opportunities and support data-driven merchandising decisions.",
+  highlights: [
+    "Market basket and product correlation analysis",
+    "Customer purchasing patterns",
+    "Cross-selling and merchandising insights"
+  ],
+  tools: "Excel · Correlation Analysis · Data Visualisation",
+  image: "assets/woolworths.png",
+  repo: "#",
+  demo: "#"
+},
+
   {
     category: "Sales Analytics",
     title: "Target Sales Dashboard",
