@@ -1,3 +1,4 @@
+*/
 const projects = [
  
    
@@ -105,7 +106,6 @@ const projects = [
 ];
 
 
-
 const projects = [
   {
     category: "Retail Analytics",
@@ -150,3 +150,5 @@ const projects = [
     demo: "#"
   }
 ];
+
+
