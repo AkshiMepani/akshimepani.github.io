@@ -751,3 +751,50 @@ header a.back-link,
   color: #04111e;
 }
 
+
+/* ==================================
+   WOOLWORTHS - FINAL COLOUR FIX
+   ================================== */
+
+/* AM logo - same as main portfolio */
+header.woolworths-header a.brand span {
+  display: inline-grid !important;
+  place-items: center !important;
+
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  min-height: 34px !important;
+
+  padding: 0 !important;
+  margin-right: 8px !important;
+
+  border-radius: 10px !important;
+
+  background: linear-gradient(
+    135deg,
+    #5eead4,
+    #60a5fa
+  ) !important;
+
+  color: #04111e !important;
+  font-size: 16px !important;
+  line-height: 1 !important;
+  box-shadow: none !important;
+}
+
+/* View Workbook - same mint as main buttons */
+.woolworths-page a.ww-button.ww-primary {
+  background: #5eead4 !important;
+  background-image: none !important;
+  color: #03131d !important;
+  border: 1px solid #5eead4 !important;
+}
+
+/* Button hover */
+.woolworths-page a.ww-button.ww-primary:hover {
+  background: #60a5fa !important;
+  border-color: #60a5fa !important;
+  color: #03131d !important;
+}
+
