@@ -682,3 +682,57 @@ body {
   }
 
 }
+
+
+
+/* ==========================================
+   WOOLWORTHS HEADER - MATCH MAIN PORTFOLIO
+   ========================================== */
+
+/* Header background */
+header,
+.ww-header,
+.project-header {
+  background: #0f1422 !important;
+}
+
+/* AM logo */
+header .logo,
+header .brand-mark,
+header .brand-icon,
+.ww-header .logo,
+.ww-header .brand-mark,
+.project-header .logo {
+  background: linear-gradient(
+    135deg,
+    #9fe4d5 0%,
+    #8ca9f5 100%
+  ) !important;
+
+  color: #081323 !important;
+  border: none !important;
+  border-radius: 14px !important;
+
+  width: 52px !important;
+  height: 52px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  font-weight: 800 !important;
+}
+
+/* Name */
+header .brand-name,
+.ww-header .brand-name,
+.project-header .brand-name {
+  color: #f5f7ff !important;
+}
+
+/* Back to Projects link */
+header a.back-link,
+.ww-header a.back-link,
+.project-header a.back-link {
+  color: #9fe4d5 !important;
+}
