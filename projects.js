@@ -12,8 +12,10 @@ const projects = [
   ],
   tools: "Excel · Correlation Analysis · Data Visualisation",
   image: "assets/woolworths.png",
-  repo: "#",
-  demo: "#"
+ 
+repo: "#",
+demo: "project-woolworths.html"
+
 },
 
  
