@@ -503,3 +503,182 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+/* =====================================
+   KEY FINDINGS - CORRELATION RANKING
+   ===================================== */
+
+.correlation-panel {
+  background: linear-gradient(
+    135deg,
+    #0c1423,
+    #101b2b
+  );
+
+  border: 1px solid #293a55;
+  border-radius: 20px;
+
+  padding: 28px;
+  margin-top: 32px;
+
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* COLUMN HEADINGS */
+
+.correlation-header {
+  display: flex;
+  justify-content: space-between;
+
+  color: #8998ae;
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+
+  padding: 0 12px 16px;
+}
+
+/* INDIVIDUAL ROWS */
+
+.correlation-row {
+  display: grid;
+
+  grid-template-columns:
+    36px
+    minmax(180px, 270px)
+    minmax(100px, 1fr)
+    70px;
+
+  align-items: center;
+  gap: 18px;
+
+  padding: 16px 12px;
+  border-radius: 12px;
+  min-height: 76px;
+}
+
+/* FEATURED TOP CORRELATION */
+
+.correlation-row.featured {
+  background: linear-gradient(
+    90deg,
+    #112344,
+    #10213d
+  );
+}
+
+/* RANK NUMBER */
+
+.correlation-rank {
+  color: #8998ae;
+  font-family: monospace;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* PRODUCT NAME AND DESCRIPTION */
+
+.correlation-product {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.correlation-product strong {
+  color: #f5f8ff;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.correlation-product small {
+  color: #aabbd1;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* BLUE CORRELATION BAR */
+
+.correlation-bar {
+  width: 100%;
+  height: 12px;
+  background: #293a55;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.correlation-bar div {
+  height: 100%;
+  border-radius: 20px;
+
+  background: linear-gradient(
+    90deg,
+    #2465c7,
+    #58a8ff
+  );
+}
+
+/* CORRELATION VALUE */
+
+.correlation-value {
+  color: #f5f8ff;
+  text-align: right;
+
+  font-family: monospace;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* TABLET */
+
+@media (max-width: 850px) {
+
+  .correlation-row {
+    grid-template-columns:
+      28px
+      minmax(0, 1fr)
+      65px;
+
+    gap: 12px;
+  }
+
+  .correlation-bar {
+    grid-column: 2 / 4;
+    grid-row: 2;
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .correlation-panel {
+    padding: 16px 10px;
+  }
+
+  .correlation-row {
+    padding: 16px 10px;
+  }
+
+  .correlation-product strong {
+    font-size: 13px;
+  }
+
+  .correlation-product small {
+    font-size: 11px;
+  }
+
+  .correlation-value {
+    font-size: 15px;
+  }
+
+  .correlation-header {
+    font-size: 9px;
+  }
+
+}
