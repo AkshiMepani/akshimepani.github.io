@@ -7,152 +7,219 @@
 
   <title>Woolworths Market Basket Analysis | Akshi Mepani</title>
 
-  <link rel="stylesheet" href="styles.css">
-
   <style>
+    :root {
+      --bg: #0B1423;
+      --surface: #142236;
+      --text: #F5F8FF;
+      --muted: #AABBD1;
+      --mint: #79E5D4;
+      --green: #AAD84A;
+      --border: #344156;
+      --blue: #58A8FF;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     html {
       scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
-      background: #080e19;
-      color: #f5f8ff;
+      background: var(--bg);
+      color: var(--text);
       font-family: Inter, Arial, sans-serif;
-      line-height: 1.65;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
     }
 
     .case-wrap {
-      width: min(1100px, calc(100% - 40px));
-      margin: auto;
+      width: min(1200px, calc(100% - 48px));
+      margin: 0 auto;
     }
+
+    /* NAVIGATION */
 
     .case-nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 20px;
-      padding: 25px 0;
-      border-bottom: 1px solid #273750;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
     }
 
     .case-brand {
-      color: white;
-      font-size: 19px;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--text);
+    }
+
+    .case-logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 46px;
+      height: 46px;
+      border-radius: 13px;
+      background: linear-gradient(
+        135deg,
+        #98E6D5,
+        #82AEF8
+      );
+      color: #0B1423;
+      font-size: 20px;
       font-weight: 800;
-      text-decoration: none;
+      line-height: 1;
+    }
+
+    .case-name {
+      color: var(--text);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.2;
     }
 
     .case-back {
-      color: #8ce7d7;
-      text-decoration: none;
-      font-weight: 700;
+      color: var(--mint);
+      font-size: 16px;
+      font-weight: 600;
     }
 
+    .case-back:hover {
+      color: white;
+    }
+
+    /* PROJECT HERO */
+
     .case-hero {
-      padding: 75px 0 60px;
+      padding: 38px 0 45px;
     }
 
     .case-eyebrow {
-      color: #b4e55c;
+      display: inline-block;
+      color: var(--green);
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
     }
 
     .case-hero h1 {
-      font-size: clamp(38px, 6vw, 70px);
-      line-height: 1.1;
-      letter-spacing: -2px;
-      margin: 18px 0 25px;
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 1.12;
+      letter-spacing: -1.5px;
+      max-width: 1100px;
+      margin: 10px 0 22px;
     }
 
     .case-intro {
-      color: #a9b8cc;
-      font-size: 19px;
-      max-width: 780px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0;
     }
 
     .case-actions {
       display: flex;
-      gap: 15px;
       flex-wrap: wrap;
-      margin-top: 30px;
+      gap: 15px;
+      margin-top: 24px;
     }
 
     .case-btn {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       padding: 13px 22px;
-      background: #16243a;
-      color: white;
-      border: 1px solid #4a6383;
+      background: var(--surface);
+      border: 1px solid var(--border);
       border-radius: 10px;
-      text-decoration: none;
+      color: var(--mint);
+      font-size: 15px;
       font-weight: 700;
+      transition: transform 0.2s;
     }
 
     .case-btn.primary {
-      background: #b2df5c;
-      color: #10200b;
-      border-color: #b2df5c;
+      background: var(--mint);
+      border-color: var(--mint);
+      color: var(--bg);
     }
 
     .case-btn:hover {
       transform: translateY(-2px);
-      transition: 0.2s;
     }
 
     .case-hero-img {
       display: block;
       width: 100%;
-      max-height: 480px;
-      object-fit: cover;
-      border-radius: 18px;
-      margin-top: 45px;
-      border: 1px solid #273750;
+      height: auto;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      margin-top: 30px;
     }
+
+    /* SHARED SECTIONS */
 
     .case-section {
       padding: 65px 0;
-      border-top: 1px solid #1c2a40;
-      scroll-margin-top: 100px;
+      border-top: 1px solid var(--border);
+      scroll-margin-top: 90px;
     }
 
     .case-kicker {
-      color: #65a9ff;
+      display: inline-block;
+      color: var(--mint);
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     .case-section h2 {
-      font-size: clamp(30px, 4vw, 52px);
+      color: var(--text);
+      font-size: clamp(30px, 4vw, 48px);
       line-height: 1.15;
-      margin: 12px 0 25px;
       letter-spacing: -1px;
+      margin: 12px 0 25px;
     }
 
     .case-section p {
-      color: #a9b8cc;
+      color: var(--muted);
+      font-size: 16px;
       max-width: 850px;
     }
 
+    /* METHODOLOGY */
+
     .case-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 16px;
       margin-top: 28px;
     }
 
     .case-tile {
-      background: #101a2a;
-      border: 1px solid #273750;
+      background: var(--surface);
+      border: 1px solid var(--border);
       border-radius: 15px;
       padding: 23px;
     }
 
     .case-tile strong {
       display: block;
+      color: var(--text);
       margin-bottom: 12px;
     }
 
@@ -161,20 +228,26 @@
       font-size: 14px;
     }
 
+    /* DASHBOARD PLACEHOLDER */
+
     .case-placeholder {
-      background: #111c2c;
-      border: 1px dashed #4b617c;
+      background: var(--surface);
+      border: 1px dashed #526781;
       border-radius: 16px;
-      padding: 35px;
-      color: #a9b8cc;
+      padding: 40px;
+      color: var(--muted);
       text-align: center;
     }
 
     /* KEY FINDINGS */
 
     .findings-panel {
-      background: linear-gradient(135deg, #0b101b, #101a29);
-      border: 1px solid #253752;
+      background: linear-gradient(
+        135deg,
+        #101827,
+        #142236
+      );
+      border: 1px solid var(--border);
       border-radius: 20px;
       padding: 30px 26px;
     }
@@ -182,7 +255,8 @@
     .findings-columns {
       display: flex;
       justify-content: space-between;
-      color: #8896aa;
+      gap: 15px;
+      color: #8896AA;
       font-size: 11px;
       font-weight: 800;
       letter-spacing: 1.5px;
@@ -191,15 +265,16 @@
 
     .finding-row {
       display: grid;
-      grid-template-columns: 36px 260px minmax(0, 1fr) 70px;
-      gap: 18px;
+      grid-template-columns:
+        36px 260px minmax(0, 1fr) 70px;
       align-items: center;
+      gap: 18px;
       padding: 18px 12px;
       border-radius: 12px;
     }
 
     .finding-rank {
-      color: #8c9ab0;
+      color: #8C9AB0;
       font-family: monospace;
       font-weight: 700;
     }
@@ -208,6 +283,7 @@
       display: flex;
       flex-direction: column;
       gap: 5px;
+      min-width: 0;
     }
 
     .finding-details strong {
@@ -216,20 +292,24 @@
     }
 
     .finding-details small {
-      color: #b3c0d1;
+      color: #B3C0D1;
       font-size: 13px;
     }
 
     .finding-bar {
       height: 13px;
-      background: #293a55;
+      background: #293A55;
       border-radius: 20px;
       overflow: hidden;
     }
 
     .finding-bar div {
       height: 100%;
-      background: linear-gradient(90deg, #2465c7, #58a8ff);
+      background: linear-gradient(
+        90deg,
+        #2465C7,
+        #58A8FF
+      );
       border-radius: inherit;
     }
 
@@ -241,23 +321,30 @@
     }
 
     .featured-finding {
-      background: rgba(30, 91, 180, 0.2);
+      background: rgba(121, 229, 212, 0.08);
     }
 
     .case-note {
-      font-size: 13px;
+      color: var(--muted);
+      font-size: 13px !important;
       margin-top: 20px;
     }
 
+    /* FOOTER */
+
     .case-footer {
-      padding: 40px 0;
-      border-top: 1px solid #273750;
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      gap: 20px;
       flex-wrap: wrap;
-      color: #a9b8cc;
+      gap: 20px;
+      padding: 35px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
     }
+
+    /* RESPONSIVE */
 
     @media (max-width: 850px) {
       .case-grid {
@@ -265,7 +352,8 @@
       }
 
       .finding-row {
-        grid-template-columns: 28px minmax(0, 1fr) 65px;
+        grid-template-columns:
+          28px minmax(0, 1fr) 65px;
         gap: 12px;
       }
 
@@ -277,405 +365,98 @@
       .findings-panel {
         padding: 20px 14px;
       }
+    }
+
+    @media (max-width: 650px) {
+      .case-wrap {
+        width: calc(100% - 32px);
+      }
+
+      .case-nav {
+        padding: 14px 0;
+      }
+
+      .case-logo {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+      }
+
+      .case-name {
+        font-size: 16px;
+      }
+
+      .case-back {
+        font-size: 12px;
+      }
+
+      .case-hero {
+        padding: 30px 0 40px;
+      }
+
+      .case-hero h1 {
+        font-size: 34px;
+      }
+
+      .case-section {
+        padding: 45px 0;
+      }
 
       .finding-details strong {
         font-size: 14px;
       }
+
+      .finding-details small {
+        font-size: 12px;
+      }
+
+      .case-placeholder {
+        padding: 24px;
+      }
     }
-
-/* MATCH MAIN PORTFOLIO COLOURS */
-
-body {
-  background: #0B1423;
-  color: #F5F8FF;
-}
-
-.case-tile,
-.case-placeholder {
-  background: #142236;
-}
-
-.case-back {
-  color: #79E5D4;
-}
-
-.case-kicker {
-  color: #79E5D4;
-}
-
-.case-intro,
-.case-section p {
-  color: #AABBD1;
-}
-
-.case-btn {
-  background: #142236;
-  border-color: #344156;
-  color: #79E5D4;
-}
-
-.case-btn.primary {
-  background: #79E5D4;
-  border-color: #79E5D4;
-  color: #0B1423;
-}
-
-.case-eyebrow {
-  color: #AAD84A;
-}
-
-.findings-panel {
-  background: linear-gradient(135deg, #101827, #142236);
-  border-color: #344156;
-}
-
-.featured-finding {
-  background: rgba(121, 229, 212, 0.08);
-}
-    
-/* WOOLWORTHS PAGE VISUAL REFINEMENTS */
-
-.case-hero {
-  padding: 55px 0 45px;
-}
-
-.case-hero h1 {
-  font-size: clamp(36px, 4.5vw, 58px);
-  line-height: 1.12;
-  letter-spacing: -1.5px;
-  max-width: 950px;
-}
-
-.case-intro {
-  font-size: 17px;
-  line-height: 1.7;
-  max-width: 760px;
-}
-
-.case-hero-img {
-  width: 100%;
-  height: auto;
-  max-height: none;
-  object-fit: contain;
-  border-radius: 16px;
-  margin-top: 35px;
-}
-
-@media (max-width: 650px) {
-  .case-hero {
-    padding: 35px 0;
-  }
-
-  .case-hero h1 {
-    font-size: 36px;
-  }
-}
-
-
-/* COMPACT WOOLWORTHS HERO */
-
-.case-hero {
-  padding: 38px 0 45px;
-}
-
-.case-hero h1 {
-  font-size: clamp(34px, 4vw, 54px);
-  line-height: 1.12;
-  letter-spacing: -1.5px;
-  max-width: 1050px;
-  margin: 14px 0 20px;
-}
-
-.case-intro {
-  font-size: 17px;
-  line-height: 1.6;
-  max-width: 800px;
-  margin-bottom: 0;
-}
-
-.case-actions {
-  margin-top: 24px;
-}
-
-.case-hero-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: none;
-  object-fit: contain;
-  margin-top: 30px;
-  border-radius: 16px;
-}
-
-@media (max-width: 650px) {
-  .case-hero h1 {
-    font-size: 34px;
-  }
-}
-
-    
-/* ===== MATCH MAIN PORTFOLIO NAVIGATION ===== */
-
-
-.case-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  padding: 16px 0;
-  border-bottom: 1px solid #273750;
-  box-sizing: border-box;
-}
-
-
-.case-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  color: #F5F8FF;
-  text-decoration: none;
-}
-
- 
-.case-brand .case-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-
-  width: 46px;
-  height: 46px;
-  min-width: 46px;
-  min-height: 46px;
-
-  padding: 0;
-  margin: 0;
-  border-radius: 13px;
-
-  background: linear-gradient(135deg, #98E6D5, #82AEF8);
-  color: #0B1423;
-
-  font-size: 20px;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.case-brand .case-name {
-  color: #F5F8FF;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.2;
-}
-   
-
-.case-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 52px;
-  height: 52px;
-
-  background: linear-gradient(135deg, #98E6D5, #82AEF8);
-  color: #0B1423;
-
-  border-radius: 15px;
-  font-size: 21px;
-  font-weight: 800;
-}
-
-.case-name {
-  color: #F5F8FF;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.case-back {
-  color: #79E5D4;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.case-back:hover {
-  color: #FFFFFF;
-}
-
-/* ===== FIX RETAIL ANALYTICS SPACING ===== */
-
-.case-hero {
-  padding-top: 28px;
-  padding-bottom: 45px;
-}
-
-.case-eyebrow {
-  display: inline-block;
-  margin-bottom: 8px;
-
-  color: #AAD84A;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.case-hero h1 {
-  margin-top: 10px;
-  margin-bottom: 22px;
-  font-size: clamp(34px, 4vw, 54px);
-  line-height: 1.12;
-}
-
-/* Mobile adjustments */
-
-@media (max-width: 650px) {
-  .case-nav {
-    padding: 15px 0;
-  }
-
-  .case-logo {
-    width: 44px;
-    height: 44px;
-    font-size: 18px;
-  }
-
-  .case-name {
-    font-size: 16px;
-  }
-
-  .case-back {
-    font-size: 13px;
-  }
-
-  .case-hero {
-    padding-top: 25px;
-  }
-}
-
-    
-/* MATCH MAIN PORTFOLIO HEADER EXACTLY */
-
-.case-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 105px;
-  padding: 16px 0;
-  gap: 20px;
-  box-sizing: border-box;
-}
-
-.case-brand {
-  display: inline-flex !important;
-  align-items: center;
-  gap: 15px !important;
-  text-decoration: none;
-}
-
-.case-logo {
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-
-  width: 52px !important;
-  height: 52px !important;
-  min-width: 52px;
-  min-height: 52px;
-
-  padding: 0 !important;
-  margin: 0 !important;
-
-  background: linear-gradient(
-    135deg,
-    #98E6D5,
-    #82AEF8
-  );
-
-  border-radius: 15px !important;
-  color: #0B1423 !important;
-
-  font-size: 21px !important;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.case-name {
-  font-size: 20px !important;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #F5F8FF;
-  margin: 0;
-}
-
-.case-back {
-  font-size: 16px;
-  font-weight: 600;
-  color: #79E5D4;
-  text-decoration: none;
-}
-
-/* MOBILE */
-@media (max-width: 650px) {
-  .case-nav {
-    min-height: 80px;
-    padding: 12px 0;
-  }
-
-  .case-logo {
-    width: 44px !important;
-    height: 44px !important;
-    min-width: 44px;
-    min-height: 44px;
-    font-size: 18px !important;
-  }
-
-  .case-name {
-    font-size: 16px !important;
-  }
-
-  .case-back {
-    font-size: 13px;
-  }
-}
-
-    
   </style>
 </head>
 
 <body>
+
   <div class="case-wrap">
 
-   
+    <!-- NAVIGATION -->
 
-<nav class="case-nav">
-  <a href="index.html" class="case-brand">
-    <span class="case-logo">AM</span>
-    <span class="case-name">Akshi Mepani</span>
-  </a>
+    <nav class="case-nav">
 
-  <a href="index.html#projects" class="case-back">
-    ← Back to Projects
-  </a>
-</nav>
+      <a href="index.html" class="case-brand">
+        <span class="case-logo">AM</span>
+        <span class="case-name">Akshi Mepani</span>
+      </a>
 
+      <a href="index.html#projects" class="case-back">
+        ← Back to Projects
+      </a>
 
+    </nav>
 
     <!-- PROJECT HERO -->
+
     <header class="case-hero">
 
       <span class="case-eyebrow">
         RETAIL ANALYTICS · EXCEL
       </span>
 
-      <h1>Woolworths Market Basket Analysis</h1>
+      <h1>
+        Woolworths Market Basket Analysis
+      </h1>
 
       <p class="case-intro">
-        Exploring purchasing relationships across 8,902
-        grocery transactions to identify opportunities
-        for cross-selling and data-driven merchandising.
+        Exploring purchasing relationships across
+        8,902 grocery transactions to identify
+        opportunities for cross-selling and
+        data-driven merchandising.
       </p>
 
       <div class="case-actions">
+
         <a href="#findings" class="case-btn primary">
           Key Findings ↓
         </a>
@@ -683,20 +464,24 @@ body {
         <a href="#workbook" class="case-btn">
           View Workbook ↗
         </a>
+
       </div>
 
       <img
         src="assets/woolworths.png"
-        alt="Woolworths Market Basket Analysis"
+        alt="Woolworths Market Basket Analysis cover"
         class="case-hero-img"
       >
 
     </header>
 
-    <!-- OVERVIEW -->
+    <!-- 01 OVERVIEW -->
+
     <section class="case-section" id="overview">
 
-      <span class="case-kicker">01 — OVERVIEW</span>
+      <span class="case-kicker">
+        01 — OVERVIEW
+      </span>
 
       <h2>Understanding the Business Problem</h2>
 
@@ -715,10 +500,13 @@ body {
 
     </section>
 
-    <!-- METHODOLOGY -->
+    <!-- 02 METHODOLOGY -->
+
     <section class="case-section" id="approach">
 
-      <span class="case-kicker">02 — METHODOLOGY</span>
+      <span class="case-kicker">
+        02 — METHODOLOGY
+      </span>
 
       <h2>From Transactions to Insights</h2>
 
@@ -749,9 +537,11 @@ body {
         </div>
 
       </div>
+
     </section>
 
-    <!-- DASHBOARD -->
+    <!-- 03 DASHBOARD -->
+
     <section class="case-section" id="dashboard">
 
       <span class="case-kicker">
@@ -766,7 +556,8 @@ body {
 
     </section>
 
-    <!-- KEY FINDINGS -->
+    <!-- 04 KEY FINDINGS -->
+
     <section class="case-section" id="findings">
 
       <span class="case-kicker">
@@ -782,22 +573,33 @@ body {
           <span>CORRELATION (R)</span>
         </div>
 
+        <!-- FINDING 01 -->
+
         <div class="finding-row">
+
           <span class="finding-rank">01</span>
 
           <div class="finding-details">
             <strong>Pasta &amp; Pasta Sauce</strong>
-            <small>Strongest pair in reference example</small>
+            <small>
+              Strongest pair in reference example
+            </small>
           </div>
 
           <div class="finding-bar">
             <div style="width:95.5%"></div>
           </div>
 
-          <strong class="finding-value">0.955</strong>
+          <strong class="finding-value">
+            0.955
+          </strong>
+
         </div>
 
+        <!-- FINDING 02 -->
+
         <div class="finding-row">
+
           <span class="finding-rank">02</span>
 
           <div class="finding-details">
@@ -809,25 +611,39 @@ body {
             <div style="width:78.7%"></div>
           </div>
 
-          <strong class="finding-value">0.787</strong>
+          <strong class="finding-value">
+            0.787
+          </strong>
+
         </div>
 
+        <!-- FINDING 03 -->
+
         <div class="finding-row">
+
           <span class="finding-rank">03</span>
 
           <div class="finding-details">
             <strong>Wet Wipes &amp; Chocolates</strong>
-            <small>Unexpected product relationship</small>
+            <small>
+              Unexpected product relationship
+            </small>
           </div>
 
           <div class="finding-bar">
             <div style="width:78.1%"></div>
           </div>
 
-          <strong class="finding-value">0.781</strong>
+          <strong class="finding-value">
+            0.781
+          </strong>
+
         </div>
 
+        <!-- FINDING 04 -->
+
         <div class="finding-row featured-finding">
+
           <span class="finding-rank">04</span>
 
           <div class="finding-details">
@@ -839,10 +655,16 @@ body {
             <div style="width:75.7%"></div>
           </div>
 
-          <strong class="finding-value">0.757</strong>
+          <strong class="finding-value">
+            0.757
+          </strong>
+
         </div>
 
+        <!-- FINDING 05 -->
+
         <div class="finding-row">
+
           <span class="finding-rank">05</span>
 
           <div class="finding-details">
@@ -854,29 +676,36 @@ body {
             <div style="width:70%"></div>
           </div>
 
-          <strong class="finding-value">0.700</strong>
+          <strong class="finding-value">
+            0.700
+          </strong>
+
         </div>
 
       </div>
 
       <p class="case-note">
-        Draft values from the reference example.
-        Replace these with verified findings from
-        your own Excel workbook before publishing.
+        These values are from the reference example.
+        Replace them with verified findings from
+        your own workbook before publishing this
+        section as your analysis.
       </p>
 
     </section>
 
-    <!-- WORKBOOK -->
+    <!-- 05 WORKBOOK -->
+
     <section class="case-section" id="workbook">
 
-      <span class="case-kicker">05 — WORKBOOK</span>
+      <span class="case-kicker">
+        05 — WORKBOOK
+      </span>
 
       <h2>Explore the Workbook</h2>
 
       <p>
         A shareable Excel workbook link will be
-        added here.
+        added here once the file is ready.
       </p>
 
       <div class="case-placeholder">
@@ -885,8 +714,12 @@ body {
 
     </section>
 
-    <!-- BUSINESS APPLICATION -->
-    <section class="case-section" id="recommendations">
+    <!-- 06 BUSINESS APPLICATION -->
+
+    <section
+      class="case-section"
+      id="recommendations"
+    >
 
       <span class="case-kicker">
         06 — BUSINESS APPLICATION
@@ -898,6 +731,9 @@ body {
         Product purchasing relationships can help
         identify opportunities for bundled offers,
         product placement and targeted promotions.
+      </p>
+
+      <p>
         These opportunities should be tested before
         claiming improvements in sales performance.
       </p>
@@ -905,18 +741,23 @@ body {
     </section>
 
     <!-- FOOTER -->
+
     <footer class="case-footer">
 
       <span>
         © Akshi Mepani · Analytics Portfolio
       </span>
 
-      <a href="index.html#projects" class="case-back">
+      <a
+        href="index.html#projects"
+        class="case-back"
+      >
         ← All Projects
       </a>
 
     </footer>
 
   </div>
+
 </body>
 </html>
