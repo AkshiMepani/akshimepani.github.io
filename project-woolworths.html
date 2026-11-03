@@ -414,22 +414,135 @@ body {
 }
 
     
+/* ===== MATCH MAIN PORTFOLIO NAVIGATION ===== */
+
+.case-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  padding: 20px 0;
+  border-bottom: 1px solid #273750;
+}
+
+.case-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+
+  color: #F5F8FF;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.case-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 52px;
+  height: 52px;
+
+  background: linear-gradient(135deg, #98E6D5, #82AEF8);
+  color: #0B1423;
+
+  border-radius: 15px;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.case-name {
+  color: #F5F8FF;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.case-back {
+  color: #79E5D4;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.case-back:hover {
+  color: #FFFFFF;
+}
+
+/* ===== FIX RETAIL ANALYTICS SPACING ===== */
+
+.case-hero {
+  padding-top: 28px;
+  padding-bottom: 45px;
+}
+
+.case-eyebrow {
+  display: inline-block;
+  margin-bottom: 8px;
+
+  color: #AAD84A;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.case-hero h1 {
+  margin-top: 10px;
+  margin-bottom: 22px;
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: 1.12;
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 650px) {
+  .case-nav {
+    padding: 15px 0;
+  }
+
+  .case-logo {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+
+  .case-name {
+    font-size: 16px;
+  }
+
+  .case-back {
+    font-size: 13px;
+  }
+
+  .case-hero {
+    padding-top: 25px;
+  }
+}
+
+    
   </style>
 </head>
 
 <body>
   <div class="case-wrap">
 
-    <!-- NAVIGATION -->
-    <nav class="case-nav">
-      <a href="index.html" class="case-brand">
-        AM &nbsp; Akshi Mepani
-      </a>
+   
+<!-- NAVIGATION -->
+<nav class="case-nav">
 
-      <a href="index.html#projects" class="case-back">
-        ← Back to Projects
-      </a>
-    </nav>
+  <a href="index.html" class="case-brand">
+    <span class="case-logo">AM</span>
+    <span class="case-name">Akshi Mepani</span>
+  </a>
+
+  <a href="index.html#projects" class="case-back">
+    ← Back to Projects
+  </a>
+
+</nav>
+
 
     <!-- PROJECT HERO -->
     <header class="case-hero">
