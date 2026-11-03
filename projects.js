@@ -32,20 +32,22 @@ const projects = [
   demo: "#"
 },
 
-  {
-    category: "Loyalty Analytics",
-    title: "Everyday Rewards Dashboard",
-    description: "A Power BI dashboard tracking member engagement, points activity and redemption to support retention strategy.",
-    highlights: [
-      "Customer engagement",
-      "Loyalty KPI tracking",
-      "Redemption analysis"
-    ],
-    tools: "Power BI · DAX · KPI Tracking",
-    image: "assets/everyday-rewards.png",
-    repo: "#",
-    demo: "#"
-  },
+ 
+{
+  category: "Loyalty Analytics",
+  title: "Everyday Rewards Loyalty KPI Dashboard",
+  description: "Developed an interactive Power BI dashboard analysing customer membership, transaction activity, points earned and redeemed, and revenue performance across Sydney stores.",
+  highlights: [
+    "Membership growth and customer engagement",
+    "Points earned versus redeemed analysis",
+    "Revenue and redemption insights by location"
+  ],
+  tools: "Power BI · DAX · Data Visualisation",
+  image: "assets/everyday-rewards.png",
+  repo: "#",
+  demo: "#"
+},
+
   {
     category: "Healthcare Analytics",
     title: "Healthcare Admissions Dashboard",
