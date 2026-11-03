@@ -4,14 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Woolworths Market Basket Analysis by Akshi Mepani">
+
+  <meta name="description"
+    content="Woolworths Market Basket Analysis by Akshi Mepani. Exploring product purchasing relationships across 8,902 grocery transactions.">
+
   <title>Woolworths Market Basket Analysis | Akshi Mepani</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
+
+    /* ==============================
+       PORTFOLIO COLOURS
+    ============================== */
+
     :root {
       --bg: #0B1423;
       --surface: #142236;
@@ -21,30 +30,39 @@
       --green: #AAD84A;
       --border: #344156;
       --blue: #2465C7;
+      --blue-light: #58A8FF;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font-family: 'DM Sans', Arial, sans-serif;
+      font-family: "DM Sans", Arial, sans-serif;
       line-height: 1.65;
     }
 
-    a { text-decoration: none; }
+    a {
+      text-decoration: none;
+    }
 
     .case-wrap {
       width: min(1200px, calc(100% - 48px));
       margin: 0 auto;
     }
 
-    /* HEADER */
+    /* ==============================
+       HEADER
+    ============================== */
 
-    .site-header {
+    .case-nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -52,136 +70,180 @@
       min-height: 76px;
       padding: 12px 16px;
       border-bottom: 1px solid #273750;
-      background: linear-gradient(90deg, #1B2230, #0B1423 75%);
+      background: linear-gradient(
+        90deg,
+        #1B2230 0%,
+        #0B1423 75%
+      );
     }
 
-    .brand {
+    .case-brand {
       display: inline-flex;
       align-items: center;
       gap: 12px;
       color: var(--text);
-      font-family: 'Space Grotesk', sans-serif;
       font-size: 17px;
       font-weight: 700;
       white-space: nowrap;
     }
 
-    .brand-mark {
+    .case-logo {
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
       width: 42px;
       height: 42px;
-      flex-shrink: 0;
       border-radius: 12px;
-      background: linear-gradient(135deg, #98E6D5, #82AEF8);
+      background: linear-gradient(
+        135deg,
+        #98E6D5,
+        #82AEF8
+      );
       color: #0B1423;
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: "Space Grotesk", sans-serif;
       font-size: 19px;
       font-weight: 700;
+      line-height: 1;
     }
 
     .case-back {
       color: var(--mint);
       font-size: 15px;
       font-weight: 700;
+      white-space: nowrap;
     }
 
-    .case-back:hover { color: white; }
+    .case-back:hover {
+      color: #FFFFFF;
+    }
 
-    /* HERO */
+    /* ==============================
+       HERO SECTION
+    ============================== */
 
-    .case-hero { padding: 60px 0 56px; }
+    .case-hero {
+      padding: 65px 0 55px;
+    }
 
     .case-eyebrow {
+      display: inline-block;
       color: var(--green);
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 2px;
       text-transform: uppercase;
-    }
-
-    h1, h2, h3 {
-      font-family: 'Space Grotesk', sans-serif;
+      margin-bottom: 12px;
     }
 
     .case-hero h1 {
-      max-width: 1150px;
-      margin: 18px 0 24px;
-      font-size: clamp(36px, 5.1vw, 66px);
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(36px, 4.5vw, 58px);
       line-height: 1.12;
       letter-spacing: -1.8px;
+      max-width: 1150px;
+      margin: 12px 0 24px;
     }
 
     .case-intro {
-      max-width: 850px;
-      margin: 0;
       color: var(--muted);
       font-size: 18px;
-      line-height: 1.7;
+      line-height: 1.8;
+      max-width: 850px;
+      margin: 0;
     }
 
-    /* TWO HERO BUTTONS */
+    /* ==============================
+       PROJECT TAGS
+    ============================== */
+
+    .case-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .case-tag {
+      padding: 7px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      background: #101A2B;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* ==============================
+       ACTION BUTTONS
+    ============================== */
 
     .case-actions {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 28px;
+      gap: 14px;
+      margin-top: 30px;
     }
 
-    .hero-workbook-btn,
-    .hero-findings-btn {
+    .case-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       min-height: 52px;
-      padding: 13px 28px;
+      padding: 13px 27px;
       border-radius: 999px;
       font-size: 14px;
-      font-weight: 700;
-      transition: background .2s, transform .2s;
+      font-weight: 800;
+      transition: 0.2s ease;
     }
 
-    .hero-workbook-btn {
+    .case-btn.primary {
       background: var(--blue);
       border: 1px solid var(--blue);
-      color: white;
-      box-shadow: 0 10px 28px rgba(36,101,199,.22);
+      color: #FFFFFF;
     }
 
-    .hero-workbook-btn:hover {
+    .case-btn.secondary {
+      background: transparent;
+      border: 1px solid #8290A4;
+      color: #FFFFFF;
+    }
+
+    .case-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .case-btn.primary:hover {
       background: #347BE0;
-      transform: translateY(-2px);
     }
 
-    .hero-findings-btn {
-      background: #080E19;
-      border: 1px solid white;
-      color: white;
+    .case-btn.secondary:hover {
+      border-color: var(--mint);
+      color: var(--mint);
     }
 
-    .hero-findings-btn:hover {
-      background: #17243A;
-      transform: translateY(-2px);
-    }
+    /* ==============================
+       COVER IMAGE
+    ============================== */
 
     .case-hero-img {
       display: block;
       width: 100%;
       height: auto;
-      margin-top: 40px;
-      border: 1px solid var(--border);
       border-radius: 18px;
+      border: 1px solid var(--border);
+      margin-top: 45px;
     }
 
-    /* CONTENT SECTIONS */
+    /* ==============================
+       SHARED SECTIONS
+    ============================== */
 
     .case-section {
-      padding: 64px 0;
+      padding: 65px 0;
       border-top: 1px solid var(--border);
-      scroll-margin-top: 24px;
+      scroll-margin-top: 30px;
     }
 
     .case-kicker {
@@ -194,75 +256,120 @@
     }
 
     .case-section h2 {
-      margin: 12px 0 24px;
+      font-family: "Space Grotesk", sans-serif;
       font-size: clamp(30px, 4vw, 48px);
-      line-height: 1.15;
+      line-height: 1.2;
       letter-spacing: -1px;
+      margin: 14px 0 25px;
     }
 
     .case-section p {
-      max-width: 850px;
       color: var(--muted);
       font-size: 16px;
+      line-height: 1.8;
+      max-width: 900px;
     }
+
+    /* ==============================
+       OVERVIEW STATISTICS
+    ============================== */
+
+    .case-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .case-stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 25px;
+    }
+
+    .case-stat strong {
+      display: block;
+      color: var(--text);
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 30px;
+      margin-bottom: 7px;
+    }
+
+    .case-stat span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* ==============================
+       METHODOLOGY
+    ============================== */
 
     .case-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 28px;
+      gap: 18px;
+      margin-top: 30px;
     }
 
     .case-tile {
-      padding: 24px;
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 15px;
+      border-radius: 16px;
+      padding: 25px;
     }
 
     .case-tile strong {
       display: block;
-      margin-bottom: 10px;
       color: var(--text);
+      font-size: 17px;
+      margin-bottom: 12px;
     }
 
     .case-tile p {
-      margin: 0;
       font-size: 14px;
+      margin: 0;
     }
 
-    /* KEY FINDINGS */
+    /* ==============================
+       KEY FINDINGS
+    ============================== */
 
     .findings-panel {
-      padding: 30px 26px;
-      background: linear-gradient(135deg, #101827, #142236);
+      background: linear-gradient(
+        135deg,
+        #101827,
+        #142236
+      );
       border: 1px solid var(--border);
       border-radius: 20px;
+      padding: 30px 26px;
+      margin-top: 30px;
     }
 
     .findings-columns {
       display: flex;
       justify-content: space-between;
-      gap: 12px;
-      margin: 0 12px 14px;
-      color: #9EADC2;
+      gap: 15px;
+      color: #8896AA;
       font-size: 11px;
       font-weight: 800;
-      letter-spacing: 1.4px;
-      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin: 0 12px 18px;
     }
 
     .finding-row {
       display: grid;
-      grid-template-columns: 36px 240px minmax(0,1fr) 72px;
+      grid-template-columns:
+        36px 260px minmax(0, 1fr) 70px;
       align-items: center;
-      gap: 16px;
-      padding: 17px 12px;
+      gap: 18px;
+      padding: 18px 12px;
       border-radius: 12px;
     }
 
     .finding-rank {
-      color: #9EADC2;
+      color: #8C9AB0;
       font-family: monospace;
       font-weight: 700;
     }
@@ -270,97 +377,147 @@
     .finding-details {
       display: flex;
       flex-direction: column;
-      gap: 3px;
+      gap: 5px;
       min-width: 0;
     }
 
     .finding-details strong {
-      color: white;
-      font-size: 15px;
+      color: #FFFFFF;
+      font-size: 16px;
     }
 
     .finding-details small {
       color: #B3C0D1;
-      font-size: 12px;
+      font-size: 13px;
     }
 
     .finding-bar {
-      height: 12px;
-      overflow: hidden;
+      height: 13px;
       background: #293A55;
       border-radius: 20px;
+      overflow: hidden;
     }
 
-    .finding-bar span {
-      display: block;
+    .finding-bar div {
       height: 100%;
-      background: linear-gradient(90deg, #2465C7, #58A8FF);
+      background: linear-gradient(
+        90deg,
+        #2465C7,
+        #58A8FF
+      );
       border-radius: inherit;
     }
 
     .finding-value {
-      color: white;
+      color: #FFFFFF;
       text-align: right;
       font-family: monospace;
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 700;
     }
 
     .featured-finding {
-      background: rgba(121,229,212,.08);
+      background: rgba(121, 229, 212, 0.08);
     }
 
     .case-note {
-      margin-top: 20px;
       color: var(--muted);
       font-size: 13px !important;
+      margin-top: 20px;
     }
 
-    /* EMBEDDED WORKBOOK */
+    /* ==============================
+       BUSINESS RECOMMENDATIONS
+    ============================== */
 
-    .excel-preview {
-      margin-top: 28px;
-      overflow: hidden;
-      background: white;
+    .recommendation-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .recommendation {
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 16px;
+      padding: 25px;
     }
 
-    .excel-preview iframe {
-      display: block;
-      width: 100%;
-      height: 650px;
-      border: 0;
+    .recommendation strong {
+      color: var(--text);
+      font-size: 17px;
     }
 
-    .viewer-fallback {
-      margin-top: 12px;
-      font-size: 13px !important;
+    .recommendation p {
+      margin: 10px 0 0;
+      font-size: 14px;
     }
 
-    /* FOOTER */
+    /* ==============================
+       WORKBOOK SECTION
+    ============================== */
+
+    .workbook-panel {
+      margin-top: 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 30px;
+    }
+
+    .workbook-panel h3 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 23px;
+      margin: 0 0 12px;
+    }
+
+    .workbook-panel p {
+      margin: 0;
+    }
+
+    .workbook-notice {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--mint);
+      font-size: 13px;
+      margin-top: 18px;
+    }
+
+    /* ==============================
+       FOOTER
+    ============================== */
 
     .case-footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 16px;
-      padding: 32px 0;
+      gap: 20px;
+      padding: 35px 0;
       border-top: 1px solid var(--border);
       color: var(--muted);
       font-size: 14px;
     }
 
-    .case-footer a { color: var(--mint); }
+    .case-footer a {
+      color: var(--mint);
+    }
 
-    /* RESPONSIVE */
+    /* ==============================
+       RESPONSIVE DESIGN
+    ============================== */
 
     @media (max-width: 850px) {
-      .case-grid { grid-template-columns: 1fr; }
+
+      .case-grid,
+      .case-stats {
+        grid-template-columns: 1fr;
+      }
 
       .finding-row {
-        grid-template-columns: 28px minmax(0,1fr) 65px;
+        grid-template-columns:
+          28px minmax(0, 1fr) 65px;
         gap: 12px;
       }
 
@@ -369,323 +526,604 @@
         grid-row: 2;
       }
 
-      .findings-panel { padding: 20px 14px; }
+      .findings-panel {
+        padding: 20px 14px;
+      }
     }
 
     @media (max-width: 650px) {
-      .case-wrap { width: calc(100% - 32px); }
-      .site-header { padding: 12px 0; }
-      .brand { font-size: 15px; gap: 9px; }
-      .case-back { font-size: 12px; }
-      .case-hero { padding: 40px 0; }
-      .case-hero h1 { font-size: 36px; }
-      .case-section { padding: 45px 0; }
 
-      .hero-workbook-btn,
-      .hero-findings-btn {
-        padding: 12px 20px;
+      .case-wrap {
+        width: calc(100% - 32px);
+      }
+
+      .case-nav {
+        padding: 12px 0;
+      }
+
+      .case-logo {
+        width: 42px;
+        height: 42px;
+      }
+
+      .case-brand {
+        font-size: 15px;
+      }
+
+      .case-back {
         font-size: 12px;
       }
 
-      .excel-preview iframe { height: 480px; }
+      .case-hero {
+        padding: 40px 0;
+      }
+
+      .case-hero h1 {
+        font-size: 35px;
+        letter-spacing: -1px;
+      }
+
+      .case-intro {
+        font-size: 16px;
+      }
+
+      .case-section {
+        padding: 45px 0;
+      }
+
+      .finding-details strong {
+        font-size: 14px;
+      }
+
+      .finding-details small {
+        font-size: 12px;
+      }
+
+      .finding-value {
+        font-size: 14px;
+      }
+
+      .workbook-panel {
+        padding: 22px;
+      }
+
+      .case-btn {
+        font-size: 12px;
+        padding: 12px 18px;
+      }
     }
+
   </style>
 </head>
 
 <body>
+
   <div class="case-wrap">
 
-    <!-- HEADER -->
+    <!-- =========================
+         HEADER
+    ========================= -->
 
-    <header class="site-header">
-      <a class="brand" href="index.html#home">
-        <span class="brand-mark">AM</span>
+    <header class="case-nav">
+
+      <a class="case-brand" href="index.html">
+        <span class="case-logo">AM</span>
         <span>Akshi Mepani</span>
       </a>
 
       <a class="case-back" href="index.html#projects">
         ← Back to Projects
       </a>
+
     </header>
+
 
     <main>
 
-      <!-- HERO -->
+      <!-- =========================
+           HERO
+      ========================= -->
 
       <section class="case-hero">
-        <span class="case-eyebrow">Retail Analytics · Excel</span>
 
-        <h1>Woolworths Market Basket Analysis</h1>
+        <span class="case-eyebrow">
+          RETAIL ANALYTICS · EXCEL
+        </span>
+
+        <h1>
+          Woolworths Market Basket Analysis
+        </h1>
 
         <p class="case-intro">
-          Exploring purchasing relationships across 8,902
-          grocery transactions to identify opportunities for
-          cross-selling and data-driven merchandising.
+          Exploring purchasing relationships across
+          8,902 grocery transactions to identify
+          opportunities for cross-selling and
+          data-driven merchandising.
         </p>
 
+        <div class="case-tags">
+
+          <span class="case-tag">
+            Microsoft Excel
+          </span>
+
+          <span class="case-tag">
+            Correlation Analysis
+          </span>
+
+          <span class="case-tag">
+            Pivot Tables
+          </span>
+
+          <span class="case-tag">
+            Retail Analytics
+          </span>
+
+        </div>
+
+        <!-- TOP TWO BUTTONS -->
+
         <div class="case-actions">
-          <a href="#workbook" class="hero-workbook-btn">
-            VIEW WORKBOOK →
+
+          <a
+            class="case-btn primary"
+            href="https://docs.google.com/spreadsheets/d/1ZAwjCkTJC4fxLUStkfgH0UhKF6kzNCFDpDv70__pnOo/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer">
+            VIEW WORKBOOK ↗
           </a>
 
-          <a href="#findings" class="hero-findings-btn">
-            KEY FINDINGS
+          <a
+            class="case-btn secondary"
+            href="#findings">
+            KEY FINDINGS ↓
           </a>
+
         </div>
+
+        <!-- COVER IMAGE -->
 
         <img
           class="case-hero-img"
           src="assets/woolworths.png"
           alt="Woolworths Market Basket Analysis project cover"
-        >
+          loading="eager">
+
       </section>
 
-      <!-- PROJECT OVERVIEW -->
+
+      <!-- =========================
+           01 PROJECT OVERVIEW
+      ========================= -->
 
       <section class="case-section" id="overview">
-        <span class="case-kicker">01 · PROJECT OVERVIEW</span>
 
-        <h2>Understanding what customers buy together.</h2>
+        <span class="case-kicker">
+          01 · PROJECT OVERVIEW
+        </span>
+
+        <h2>
+          Understanding what customers buy together.
+        </h2>
 
         <p>
-          This project explores associations between grocery
-          products using a dataset of 8,902 transactions.
-          The goal is to identify product pairs that tend to
-          appear together and translate those relationships
-          into potential merchandising and cross-selling
-          opportunities.
+          Market basket analysis explores relationships
+          between products purchased by customers.
+          Understanding these relationships can help
+          retailers improve merchandising, product
+          placement and promotional strategies.
         </p>
-      </section>
 
-      <!-- BUSINESS OBJECTIVE -->
+        <p>
+          This project analyses 8,902 grocery transactions
+          to identify product pairs with strong purchasing
+          relationships and translate those findings into
+          potential retail business opportunities.
+        </p>
 
-      <section class="case-section" id="objective">
-        <span class="case-kicker">02 · BUSINESS OBJECTIVE</span>
+        <div class="case-stats">
 
-        <h2>From transaction patterns to retail decisions.</h2>
-
-        <div class="case-grid">
-
-          <div class="case-tile">
-            <strong>Identify product relationships</strong>
-            <p>
-              Find frequently associated product categories
-              within customer baskets.
-            </p>
+          <div class="case-stat">
+            <strong>8,902</strong>
+            <span>Grocery transactions analysed</span>
           </div>
 
-          <div class="case-tile">
-            <strong>Inform merchandising</strong>
-            <p>
-              Explore how related products could be positioned
-              or promoted together.
-            </p>
+          <div class="case-stat">
+            <strong>0.955</strong>
+            <span>Highest reported correlation</span>
           </div>
 
-          <div class="case-tile">
-            <strong>Support cross-selling</strong>
-            <p>
-              Develop testable ideas for bundles and
-              complementary product recommendations.
-            </p>
+          <div class="case-stat">
+            <strong>5</strong>
+            <span>Top product pairs highlighted</span>
           </div>
 
         </div>
+
       </section>
 
-      <!-- METHODOLOGY -->
+
+      <!-- =========================
+           02 BUSINESS PROBLEM
+      ========================= -->
+
+      <section class="case-section" id="problem">
+
+        <span class="case-kicker">
+          02 · BUSINESS PROBLEM
+        </span>
+
+        <h2>
+          Turning purchasing patterns into
+          merchandising opportunities.
+        </h2>
+
+        <p>
+          Retailers need to understand which products
+          are commonly purchased together to make
+          informed decisions about shelf placement,
+          cross-selling and product bundling.
+        </p>
+
+        <p>
+          Without analysing these relationships,
+          potential opportunities to improve the
+          shopping experience and encourage complementary
+          purchases may be overlooked.
+        </p>
+
+      </section>
+
+
+      <!-- =========================
+           03 METHODOLOGY
+      ========================= -->
 
       <section class="case-section" id="methodology">
-        <span class="case-kicker">03 · METHODOLOGY</span>
 
-        <h2>How the analysis was approached.</h2>
+        <span class="case-kicker">
+          03 · METHODOLOGY
+        </span>
+
+        <h2>
+          From transaction data to
+          actionable insights.
+        </h2>
 
         <div class="case-grid">
 
           <div class="case-tile">
-            <strong>01 · Data preparation</strong>
+
+            <strong>
+              01 · Data Preparation
+            </strong>
+
             <p>
-              Organised grocery transaction records for
-              product-level comparison in Excel.
+              Organised grocery transaction data
+              in Excel to support product-level
+              analysis and comparison.
             </p>
+
           </div>
 
           <div class="case-tile">
-            <strong>02 · Correlation analysis</strong>
+
+            <strong>
+              02 · Correlation Analysis
+            </strong>
+
             <p>
-              Examined relationships between product
-              categories and ranked the strongest pairs.
+              Examined relationships between
+              product categories using correlation
+              coefficients to identify strong
+              positive associations.
             </p>
+
           </div>
 
           <div class="case-tile">
-            <strong>03 · Interpretation</strong>
+
+            <strong>
+              03 · Business Interpretation
+            </strong>
+
             <p>
-              Connected the strongest associations to possible
-              merchandising and bundling tests.
+              Interpreted the strongest relationships
+              and identified opportunities for
+              complementary product placement,
+              promotions and bundling.
             </p>
+
           </div>
 
         </div>
+
       </section>
 
-      <!-- KEY FINDINGS -->
+
+      <!-- =========================
+           04 KEY FINDINGS
+      ========================= -->
 
       <section class="case-section" id="findings">
-        <span class="case-kicker">04 · KEY FINDINGS</span>
 
-        <h2>Top Correlated Pairs</h2>
+        <span class="case-kicker">
+          04 · KEY FINDINGS
+        </span>
+
+        <h2>
+          Top Correlated Pairs
+        </h2>
+
+        <p>
+          The following product pairs showed
+          the strongest positive correlations
+          in the analysis.
+        </p>
 
         <div class="findings-panel">
 
           <div class="findings-columns">
-            <span>Product Pair</span>
-            <span>Correlation (r)</span>
+            <span>PRODUCT PAIR</span>
+            <span>CORRELATION (R)</span>
           </div>
 
+          <!-- FINDING 01 -->
+
           <div class="finding-row">
+
             <span class="finding-rank">01</span>
+
             <div class="finding-details">
-              <strong>Pasta &amp; Pasta Sauce</strong>
-              <small>Strongest association in the analysis</small>
+              <strong>Pasta & Pasta Sauce</strong>
+              <small>Strongest product relationship</small>
             </div>
+
             <div class="finding-bar">
-              <span style="width:95.5%"></span>
+              <div style="width:95.5%"></div>
             </div>
+
             <span class="finding-value">0.955</span>
+
           </div>
 
+          <!-- FINDING 02 -->
+
           <div class="finding-row">
+
             <span class="finding-rank">02</span>
+
             <div class="finding-details">
-              <strong>Eggs &amp; Milk</strong>
-              <small>Breakfast staples</small>
+              <strong>Eggs & Milk</strong>
+              <small>Complementary breakfast staples</small>
             </div>
+
             <div class="finding-bar">
-              <span style="width:78.7%"></span>
+              <div style="width:78.7%"></div>
             </div>
+
             <span class="finding-value">0.787</span>
+
           </div>
 
+          <!-- FINDING 03 -->
+
           <div class="finding-row">
+
             <span class="finding-rank">03</span>
+
             <div class="finding-details">
-              <strong>Wet Wipes &amp; Chocolates</strong>
-              <small>An unexpected association</small>
+              <strong>Wet Wipes & Chocolates</strong>
+              <small>Unexpected purchasing relationship</small>
             </div>
+
             <div class="finding-bar">
-              <span style="width:78.1%"></span>
+              <div style="width:78.1%"></div>
             </div>
+
             <span class="finding-value">0.781</span>
+
           </div>
+
+          <!-- FINDING 04 -->
 
           <div class="finding-row featured-finding">
+
             <span class="finding-rank">04</span>
+
             <div class="finding-details">
-              <strong>Milk &amp; Bread</strong>
+              <strong>Milk & Bread</strong>
               <small>Everyday grocery essentials</small>
             </div>
+
             <div class="finding-bar">
-              <span style="width:75.7%"></span>
+              <div style="width:75.7%"></div>
             </div>
+
             <span class="finding-value">0.757</span>
+
           </div>
 
+          <!-- FINDING 05 -->
+
           <div class="finding-row">
+
             <span class="finding-rank">05</span>
+
             <div class="finding-details">
-              <strong>Diapers &amp; Wet Wipes</strong>
+              <strong>Diapers & Wet Wipes</strong>
               <small>Complementary baby-care products</small>
             </div>
+
             <div class="finding-bar">
-              <span style="width:70%"></span>
+              <div style="width:70%"></div>
             </div>
+
             <span class="finding-value">0.700</span>
+
           </div>
 
         </div>
 
         <p class="case-note">
-          Correlation describes an association, not causation.
-          Findings should be validated before making
-          merchandising decisions.
+          Correlation coefficients describe the strength
+          of relationships in the analysed data.
+          They do not establish causation or prove
+          that every customer purchases both products
+          together.
         </p>
+
       </section>
 
-      <!-- BUSINESS IMPLICATIONS -->
+
+      <!-- =========================
+           05 BUSINESS RECOMMENDATIONS
+      ========================= -->
 
       <section class="case-section" id="recommendations">
-        <span class="case-kicker">05 · BUSINESS IMPLICATIONS</span>
 
-        <h2>Turning insights into experiments.</h2>
+        <span class="case-kicker">
+          05 · BUSINESS RECOMMENDATIONS
+        </span>
 
-        <div class="case-grid">
+        <h2>
+          Translating findings into
+          retail opportunities.
+        </h2>
 
-          <div class="case-tile">
-            <strong>Complementary placement</strong>
+        <div class="recommendation-list">
+
+          <div class="recommendation">
+
+            <strong>
+              01 · Complementary Product Placement
+            </strong>
+
             <p>
-              Test adjacent placement or linked promotions
-              for strongly associated pairs such as pasta
-              and pasta sauce.
+              Explore placing strongly associated
+              products, such as pasta and pasta
+              sauce, closer together to improve
+              shopping convenience and encourage
+              complementary purchases.
             </p>
+
           </div>
 
-          <div class="case-tile">
-            <strong>Relevant bundles</strong>
+          <div class="recommendation">
+
+            <strong>
+              02 · Targeted Product Bundling
+            </strong>
+
             <p>
-              Explore targeted bundles for associated
-              categories and measure changes in basket size.
+              Test promotional bundles involving
+              complementary product categories,
+              such as diapers and wet wipes,
+              and evaluate their effect on
+              basket value.
             </p>
+
           </div>
 
-          <div class="case-tile">
-            <strong>Validate surprising pairs</strong>
+          <div class="recommendation">
+
+            <strong>
+              03 · Cross-Selling Opportunities
+            </strong>
+
             <p>
-              Investigate unexpected relationships across
-              stores and time periods before acting.
+              Use purchasing relationships to
+              inform relevant cross-selling
+              recommendations and promotional
+              campaigns.
             </p>
+
           </div>
 
         </div>
+
+        <p class="case-note">
+          These are proposed business applications
+          of the analysis, not measured outcomes
+          of implemented retail campaigns.
+        </p>
+
       </section>
 
-      <!-- ONLINE WORKBOOK VIEWER -->
+
+      <!-- =========================
+           06 VIEW WORKBOOK
+      ========================= -->
 
       <section class="case-section" id="workbook">
-        <span class="case-kicker">06 · WORKBOOK</span>
 
-        <h2>Explore the analysis.</h2>
+        <span class="case-kicker">
+          06 · WORKBOOK
+        </span>
+
+        <h2>
+          Explore the analysis.
+        </h2>
 
         <p>
-          Browse the Excel workbook containing the underlying
-          transaction analysis, product relationships and
-          correlation findings directly below.
+          Explore the Excel workbook containing
+          the transaction data, correlation
+          analysis, purchasing relationships
+          and key findings behind this project.
         </p>
 
-        <div class="excel-preview">
-          <iframe
-            src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fakshimepani.github.io%2Fassets%2FWoolies%2520Merchandise%2520.xlsx"
-            title="Woolworths Market Basket Analysis Excel Workbook"
-            loading="lazy">
-          </iframe>
+        <div class="workbook-panel">
+
+          <h3>
+            Woolworths Merchandise Analysis
+          </h3>
+
+          <p>
+            Open the workbook in Google Sheets
+            to explore the analysis and supporting
+            calculations.
+          </p>
+
+          <div class="case-actions">
+
+            <a
+              class="case-btn primary"
+              href="https://docs.google.com/spreadsheets/d/1ZAwjCkTJC4fxLUStkfgH0UhKF6kzNCFDpDv70__pnOo/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer">
+              VIEW WORKBOOK ↗
+            </a>
+
+          </div>
+
+          <div class="workbook-notice">
+            View-only access · Opens in Google Sheets
+          </div>
+
         </div>
 
-        <p class="viewer-fallback">
-          The online workbook preview requires a publicly
-          accessible Excel file and Microsoft Office for
-          the web.
-        </p>
       </section>
 
     </main>
 
-    <!-- FOOTER -->
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer class="case-footer">
-      <span>© 2026 Akshi Mepani</span>
-      <a href="index.html#projects">← Back to Projects</a>
+
+      <span>
+        © 2026 Akshi Mepani
+      </span>
+
+      <a href="index.html#projects">
+        ← Back to Projects
+      </a>
+
     </footer>
 
   </div>
+
 </body>
 </html>
