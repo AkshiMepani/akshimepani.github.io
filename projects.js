@@ -16,20 +16,22 @@ const projects = [
   demo: "#"
 },
 
-  {
-    category: "Sales Analytics",
-    title: "Target Sales Dashboard",
-    description: "An interactive sales dashboard comparing store and online retail performance across states, categories and time.",
-    highlights: [
-      "Sales performance KPIs",
-      "Store vs online analysis",
-      "Interactive reporting"
-    ],
-    tools: "Excel · Pivot Tables · Dashboard Design",
-    image: "assets/target.png",
-    repo: "#",
-    demo: "#"
-  },
+ 
+{
+  category: "Sales Analytics",
+  title: "Target Revenue Dashboard",
+  description: "Developed an interactive Excel dashboard to analyse retail revenue, store performance, customer purchasing patterns and sales trends across Australian states.",
+  highlights: [
+    "Revenue trends and financial year comparisons",
+    "Store, suburb and category performance",
+    "Online versus in-store sales analysis"
+  ],
+  tools: "Excel · Pivot Tables · Data Visualisation",
+  image: "assets/target.png",
+  repo: "#",
+  demo: "#"
+},
+
   {
     category: "Loyalty Analytics",
     title: "Everyday Rewards Dashboard",
