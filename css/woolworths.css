@@ -422,3 +422,29 @@ body {
     font-size: 12px;
   }
 }
+
+
+/* MATCH AM LOGO TO MAIN PORTFOLIO */
+
+.woolworths-header .brand span {
+  background: linear-gradient(
+    135deg,
+    #98E6D5 0%,
+    #82AEF8 100%
+  ) !important;
+
+  color: #0B1423 !important;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
