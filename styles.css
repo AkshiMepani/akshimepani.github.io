@@ -216,3 +216,29 @@
 }
 
 
+/* PROJECT CARD REFINEMENTS */
+
+#project-grid .project-card,
+.project-grid .project-card {
+  padding: 14px;
+  min-height: 0;
+}
+
+#project-grid .project-card h3,
+.project-grid .project-card h3 {
+  font-size: 1.05rem;
+  margin: 8px 0;
+}
+
+#project-grid .project-card p,
+.project-grid .project-card p {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+
+#project-grid .project-image,
+.project-grid .project-image {
+  margin-bottom: 12px;
+}
+
