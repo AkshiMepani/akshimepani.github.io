@@ -32,10 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
         <p><strong>Tools:</strong> ${p.tools}</p>
 
         <div class="project-links">
-          <a href="${p.repo || "#"}"
-             ${p.repo && p.repo !== "#" ? 'target="_blank" rel="noopener"' : ""}>
-            Repository ↗
-          </a>
+         
+<a href="${p.demo && p.demo !== "#" ? p.demo : "#"}">
+  View Project ↗
+</a>
+
 
           <a href="${p.demo || "#"}"
              ${p.demo && p.demo !== "#" ? 'target="_blank" rel="noopener"' : ""}>
